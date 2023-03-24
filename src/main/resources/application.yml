@@ -1,0 +1,74 @@
+
+server:
+  port: 32457
+  servlet:
+    context-path: /api/v1.0
+
+spring:
+  data:
+    mongodb:
+      database: ${MONGO_DATABASE:media_db}
+      host: ${MONGO_HOST:1.12.63.46}
+      port: ${MONGO_PORT:27017}
+      threads-allowed-to-block-for-connection-multiplier: 20
+      connect-timeout: 10000
+      socket-timeout: 10000
+      max-wait-time: 5000
+      connections-per-host: 20
+      username: coden
+      password: sziit1210@.
+
+
+
+  redis:
+    database: 0
+    host: ${REDIS_HOST:1.12.63.46}
+    password: ${REDIS_PWD:410a++haha}
+    port: ${REDIS_PORT:6379}
+    timeout: 3000
+    jedis:
+      pool:
+        # 连接池中的最大空闲连接
+        max-idle: 500
+        # 连接池中的最小空闲连接
+        min-idle: 50
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 2000
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 1000
+    testOnBorrow: true
+
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 50MB
+
+
+  thymeleaf:
+    mode: HTML
+    cache: false
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+logging:
+  level:
+    root: ${LOGGING_LEVEL:ERROR}
+
+cloud:
+  elasticsearch:
+    host: ${ES_HOST:1.12.63.46}
+    port: ${ES_PORT:9200}
+    username: elastic
+    password: 410a++haha
+
+me-docs:
+  config:
+    userUpload: ${ME_USER_UPLOAD:true}
+    adminReview: ${ME_ADMIN_REVIEW:true}
+    prohibitedWord: ${ME_PROHIBITED_WORD:true}
+    userRegistry: ${ME_USER_REGISTRY:false}
+    initialUsername: ${ME_INITIAL_USERNAME:admin123}
+    initialPassword: ${ME_INITIAL_PASSWORD:admin123}
+    coverAdmin: ${COVER_ADMIN:true}

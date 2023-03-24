@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "me-docs.config.userUpload",
+      "type": "java.lang.String",
+      "description": "Description for me-docs.config.userUpload."
+    },
+    {
+      "name": "me-docs.config.initialUsername",
+      "type": "java.lang.String",
+      "description": "Description for me-docs.config.initialUsername."
+    }
+  ] }
