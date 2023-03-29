@@ -8,22 +8,22 @@ spring:
   data:
     mongodb:
       database: ${MONGO_DATABASE:media_db}
-      host: ${MONGO_HOST:1.12.63.46}
+      host: ${MONGO_HOST:}
       port: ${MONGO_PORT:27017}
       threads-allowed-to-block-for-connection-multiplier: 20
       connect-timeout: 10000
       socket-timeout: 10000
       max-wait-time: 5000
       connections-per-host: 20
-      username: coden
-      password: sziit1210@.
+      username: 
+      password: 
 
 
 
   redis:
     database: 0
-    host: ${REDIS_HOST:1.12.63.46}
-    password: ${REDIS_PWD:410a++haha}
+    host: ${REDIS_HOST:}
+    password: ${REDIS_PWD:}
     port: ${REDIS_PORT:6379}
     timeout: 3000
     jedis:
@@ -58,10 +58,10 @@ logging:
 
 cloud:
   elasticsearch:
-    host: ${ES_HOST:1.12.63.46}
+    host: ${ES_HOST:}
     port: ${ES_PORT:9200}
     username: elastic
-    password: 410a++haha
+    password: 
 
 me-docs:
   config:
